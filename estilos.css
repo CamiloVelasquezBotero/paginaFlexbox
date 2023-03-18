@@ -1,0 +1,162 @@
+* {
+	margin: 0; /*Se elimina el margen por defecto para porder editarlo*/
+	padding: 0; /*Se elimina el padding por defecto para poder editarlo*/
+	-webkit-box-sizing: border-box; /*Se usaba antes para que fuera compatible con Chrome*/
+	-moz-box-sizing: border-box;	/*Se usaba antes para que fuera compatible con Firefox*/
+	box-sizing: border-box;	/*Calcula automaticamente los margenes y paddings, para que los width y height siempre sean los mismos*/
+}
+body {
+	font-family: "Open Sans", sans-serif; /*Se le indica que cargue la fuente que le dimos, o si no cargue el sans-serif*/
+	background: #000 url('imagenes/fondo.jpg');/*ten un color negro, y me cargues la imagen de la direccion...*/
+	background-size: cover; /*Quiero que el fondo que puse abarque el 100% de mi pagina*/
+	background-attachment: fixed; /*Quiero que mi fondo se quede fijado en la pantalla al hacer Scroll*/
+}
+.contenedor {
+	margin: auto; /*Quiero que tenga un margen automatico (Esto hace que se centre automaticamente)*/
+	width: 90%; /*Ten un ancho de 90% (porcentaje para que funcione con el diseño adaptable)*/
+	max-width: 1000px; /*Ten un tamaño maximo (Se le declara, para que en pantallas muy grandes no se vaya a ver muy estirado con el width establecido)*/
+	display:flex; /*Habilito que los hijos sean flexibles (Flexbox)*/
+	flex-direction:row; /*Quiero que cada hijo este uno al lado del otro en linea*/
+	flex-wrap:wrap; /*Quiero que se respete el tamaño que abarca cada hijo en el contenedor, pero aun asi se alineen con (flex-direction: row;)*/
+}
+
+/******************HEADER******************/
+header {
+	width: 100%; /*Para que abarque el 100% del contenedor que le dimos*/
+	padding: 50px 0; /*Arriba y abajo de 50px y a los lados de 0*/
+	display: flex; /*Habilito que los elementos hijos sean flexibles (Para uso de Flexbox)*/
+	flex-direction: row; /*Quiero que los elementos se pongan uno al lado del otro en fila*/
+	justify-content: space-between; /*Divideme el espacio del contenedor entre los elementos para que todos abarquen los lados*/
+	align-items: center; /*Alineame todos los elementos hijos en el centro*/
+}
+header .menu a { /*Accede al header, luego a la clase menu, y luego a los enlaces*/
+	color: #fff; /*Quiero que la fuente tenga este color*/
+	text-decoration: none; /*Quitale la decoracion a la fuente*/
+	margin-right: 40px; /*Ponle 40px de margin hacia la derecha*/
+	font-size: 18px; /*Ponle 18px de tamaño a la fuente*/
+}
+header .menu a:hover { /*Quiero que cuando se pase el cursor por encima...*/
+	text-decoration: underline; /*Decores el texto con una linea inferior*/
+}
+header .logo {
+	display: flex;
+	align-items: center;
+}
+header .logo h3 {
+	margin-left: 10px;
+	font-size: 28px;
+	color: #f1eeee;
+}
+
+.main {
+	background: #fff; /*Quiero que tenga un fondo blanco*/
+	padding: 20px; /*Ponle un padding de 20px a los elementos hijos*/
+	width: 70%; /*quiero que abarque un 70% del contenedor padre*/
+}
+.main article .thumb { /*Accede al contenedor donde tengo la imagen*/
+	margin-bottom: 20px; /*Quiero que tenga un margen hacia abajo de...*/
+}
+.main article .thumb img { /*Quiero acceder a la imagen*/
+	width: 100%; /*Quiero que tenga un ancho del 100% de su contenedor (.thumb)*/
+	vertical-align: top; /*Quiero que lo alinees en el top del contenedor*/
+}
+.main article h2 { /*Quieroq eu accedas al titulo h2*/
+	margin-bottom: 20px; /*Ten un margen hacia abajo de...*/
+	font-weight: normal; /*Quiero que tenga un font normal (Para que no se vea en negrita)*/
+	font-size: 32px; /*Quiero que la fuente tenga un tamaño de...*/
+}
+.main article p { /*Quiero que accedas a los parrafos*/
+	margin-bottom: 20px; /*Quiero que los parrafos tengan un margen hacia a abajo de...*/
+	font-size: 14px; /*Quiero que los parrafos tengan un tamaño de letra de...*/
+	line-height: 27px; /*Quiero que cada linea tenga un separado de...*/
+}
+
+/**********************ASIDE**********************/
+aside {
+	width: 30%; /*Quiero que mi aside abarque un 30% del contenedor padre*/
+	background: #537dca; /*Quiero que tenga un fondo de color...*/
+	padding: 20px; /*Quiero que tenga un padding de...*/
+	display: flex; /*Habilito que sea felxible (Flexbox)*/
+	flex-direction: column; /*Quiero que los elementos del aside tenga una direcion de columna*/
+	flex-wrap: wrap; /*Quiero que se respete el tamaño que abarca cada elemento*/
+	justify-content: space-between; /*Quiero que me dividas el espacio de los lados para que abarquen todo el espacio que tienen*/
+
+}
+aside .ad { /*Accede a los enlaces*/
+	font-size: 30px; /*Ponle un tamaño de texto de...*/
+	text-align: center; /*Alineame el texto en el centro...*/
+	color: #fff; /*Ponme un color...*/
+	padding: 50px 0; /*Quiero que tenga un padding de 50 arriba y abajo y 0 a los lados*/
+	background: #4264a2; /*Ponle un color de fondo de...*/
+	margin-bottom: 10px; /*Quiero que cada uno tenga un margen hacia abajo de ...*/
+}
+
+/******************FOOTER**************/
+footer { /*Accede al footer*/
+	margin: 20px 0; /*Margen de 20 pixeles arriba y abajo y 0 a los lados*/
+	background: rgba(255, 255, 255, .2); /*Quieroq ue tenga un fondo... con .2 de trasparencia*/
+	padding: 20px; /*Un padding de 20px a todos los lados*/
+	width: 100%; /*Un ancho del 100% de su contendor*/
+	color: #fff; /*Que la fuente tenga un color blanco*/
+	display: flex; /*Habilito que el footer pueda ser flexible (Flexbox)*/
+	flex-direction: row; /*Que tengan una direccion row, osea uno seguido del otro*/
+	flex-wrap: no-wrap; /*...*/
+	justify-content: space-between; /*Quiero que el espacio del contenedor se divida entre lso elementos hijos del contenedor*/
+}
+footer .redes-sociales a { /*Quiero que accedas a los enlaces*/
+	color: #fff; /*Quiero que la fuente tenga un color de...*/
+	text-decoration: underline; /*Quiero que el texto tenga una decoracion...*/
+	margin-left: 20px; /*Quiero que tenga un margen a la izquierda de ...*/
+}
+footer .redes-sociales a:hover { /*Quiero que cuando se pase el mouse por encima ocurra..*/
+	text-decoration: none; /*Quiero que elimines la decoracion que tenga el texto*/
+}
+
+/******************Responsive Design******************/
+@media screen and (max-width: 800px){ /*Cuando la pantalla llegue a un tamaño de 800px*/
+	.main { /*Accede a mi clase main*/
+		width: 100%; /*Quiero que tenga un ancho del 100% de su contenedor*/
+	}
+	aside { /*Accede a mi aside*/
+		width: 100%; /*Quiero que tenga un ancho del 100% de su contenedor*/
+		flex-direction: row; /*Quiero que los elementos tengan una direcion de row (fila)*/
+	}
+	aside .ad { /*Accede a mi clase ad */
+		width: 40%; /*Quiero que tengan un ancho del 100% de su contenedor*/
+	}
+}
+@media screen and (max-width: 600px) { /*Cuando la pantalla tenga un tamaño de maximo 600px*/
+	header { /*Accede a mi header*/
+		flex-direction: column; /*Quiero que los elementos hijos tengan una direcion de columna*/
+		padding-bottom: 20px; /*Quiero que tengan un margen abajo de 20px*/
+	}
+	header .menu { /*Accede a mi clase menu*/
+		width: 100%; /*Quiero que cubra un 100% de su contenedor*/
+		background: rgba(255, 255, 255, .2); /*Quiero un fondo de color...  con una transparecnia de .2*/
+		text-align: center; /*Quiero que el texto se alinee en el centro*/
+		padding: 20px; /*Quiero que tengan un padding de 20 px en todos los lados*/
+	}
+	header .menu a { /*Accede a mis enlaces a*/
+		margin: 0 20px; /*Quieroq ue tengan un margen arriba y abajo de 0 y a los lados de 20px*/
+	}
+	header .logo { /*Quiero que accedas a mi clase logo*/
+		margin-bottom: 20px; /*Quiero que tenga un margen hacia abajo de 20px*/
+	}
+	/****Footer*********/
+	footer { /*Accede a mi footer*/
+		flex-direction: column; /*Quiero que los elementos se organicen en columna*/
+		text-align: center; /*Quiero que el texto se centre*/
+	}
+	footer .autor { /*Accede a mi clase autor*/
+		order: 2; /*Quiero que la clase autor este de segundo*/
+	}
+	footer .redes-sociales { /*Accede a mi clase (redes-sociales*/
+		order: 1; /*Quiero que esta clase este de primero*/
+		margin-bottom: 20px; /*Quiero que tenga un margen abajo de 20px*/
+	}
+}
+@media screen and (max-width: 400px) { /*Cuando tenga un maximo de 400px*/
+	aside { /*Accede a mi aside*/
+		display: none; /*Quiero que no aparezca mi aside*/
+	}
+}
